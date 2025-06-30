@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: black; /* For browsers that do not support gradients */
+  background-image: linear-gradient(rgb(70, 70, 70), black);
+  color: white;
+}
+
+nav > li {
+  display: inline;
+  margin: 20px min(50px, 4vw);
+  border: 1px black;
+}
+
+nav > li:hover {
+  color: gold;
+  transition: color 200ms;
+  cursor: pointer;
+}
+
+.active {
+  color: gold;
+  transition: color 200ms;
+}
+
+.inactive {
+  color: white;
+  transition: color 200ms;
+}
+
+.underline {
+  position: absolute;
+  height: 1px;
+  top: 45px;
+  border-radius: 25px;
+  background: gold;
+}
+
+.underlineHome {
+  width: 43.288px;
+  right: calc(min(50px, 4vw) * 7 + 157.265px);
+  transition: all 200ms;
+}
+
+.underlineAbout {
+  width: 44.475px;
+  right: calc(min(50px, 4vw) * 5 + 112.79px);
+  transition: all 200ms;
+}
+
+.underlineProjects {
+  width: 57.5px;
+  right: calc(min(50px, 4vw) * 3 + 55.29px);
+  transition: all 200ms;
+}
+
+.underlineContact {
+  width: 55.29px;
+  right: min(50px, 4vw);
+  transition: all 200ms ease-in-out;
+}
