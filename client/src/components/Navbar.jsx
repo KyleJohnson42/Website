@@ -5,8 +5,6 @@ const Navbar = ({pageSelect, setPageSelect}) => {
     setPageSelect(e.target.id);
 	};
 
-  console.log(pageSelect, setPageSelect);
-
   return (
     <nav>
       <li id='home' onClick={handleClick} className={pageSelect == 'home' ? 'active' : 'inactive'}>Home</li>
