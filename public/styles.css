@@ -64,3 +64,22 @@ nav > li:hover {
   right: min(50px, 4vw);
   transition: all 200ms ease-in-out;
 }
+
+.sectionContainer-enter {
+  opacity: 0;
+  height: 0;
+}
+
+.sectionContainer-enter-active {
+  opacity: 1;
+  transition: opacity 1s 0.5s;
+}
+
+.sectionContainer-exit {
+  opacity: 1;
+}
+
+.sectionContainer-exit-active {
+  opacity: 0;
+  transition: opacity 1s;
+}

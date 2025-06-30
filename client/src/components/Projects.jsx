@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Projects = () => {
-  return <h1>My Projects</h1>;
+  return <div>My Projects</div>;
 };
 
 export default Projects;

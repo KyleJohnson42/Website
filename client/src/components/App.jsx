@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, Redirect, useHistory } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group';
 import Navbar from './Navbar.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
@@ -15,12 +15,18 @@ const App = () => {
 	return (
     <>
       <Navbar pageSelect={pageSelect} setPageSelect={setPageSelect} />
-      {pageSelect == 'home' ? <Home />
-        : pageSelect == 'about' ? <About />
-        : pageSelect == 'projects' ? <Projects />
-        : pageSelect == 'contact' ? <Contact />
-        : <NotFound />
-      }
+      <CSSTransition in={pageSelect == 'home'} timeout={{ appear: 1000, enter: 1000, exit: 500}} classNames="sectionContainer" unmountOnExit>
+        <Home />
+      </CSSTransition>
+      <CSSTransition in={pageSelect == 'about'} timeout={{ appear: 1000, enter: 1000, exit: 500}} classNames="sectionContainer" unmountOnExit>
+        <About />
+      </CSSTransition>
+      <CSSTransition in={pageSelect == 'projects'} timeout={{ appear: 1000, enter: 1000, exit: 500}} classNames="sectionContainer" unmountOnExit>
+        <Projects />
+      </CSSTransition>
+      <CSSTransition in={pageSelect == 'contact'} timeout={{ appear: 1000, enter: 1000, exit: 500}} classNames="sectionContainer" unmountOnExit>
+        <Contact />
+      </CSSTransition>
     </>
 	);
 };
