@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import PageHeader from './PageHeader.jsx';
 
 const About = () => {
-  return <div>About Me</div>;
+  return <div className='page'>
+    <PageHeader content="About Me" />
+  </div>
 };
 
 export default About;

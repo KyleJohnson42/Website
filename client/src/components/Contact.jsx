@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import PageHeader from './PageHeader.jsx';
 
 const Contact = () => {
-  return <div>Contact Me</div>;
+  return <div className='page'>
+    <PageHeader content="Contact Me" />
+  </div>
 };
 
-export default Contact
+export default Contact;
