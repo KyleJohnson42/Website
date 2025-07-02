@@ -12,7 +12,7 @@ const Home = ({setPageSelect}) => {
         <div className='homeTexts'>
           <p className='homeText largeText'>Hi there!</p>
           <p className='homeText largeText'>I'm Kyle Johnson</p>
-          <p className='homeText smallText subtitle'>A full stack software engineer</p>
+          <p className='homeText mediumText subtitle'>A full stack software engineer</p>
         </div>
         <div className='homeButtons'>
           <a href='./assets/kyle_johnson_resume.pdf' target='_blank' className='homeButton' >Resume</a>

@@ -129,12 +129,12 @@ button {
   z-index: -1;
 }
 
-.homePage, .aboutPage {
+.homePage, .aboutPage, .projectsPage {
   display: flex;
   height: 100%;
 }
 
-.homePageLeft, .homePageRight, .aboutPageLeft, .aboutPageRight {
+.homePageLeft, .homePageRight, .aboutPageLeft, .aboutPageRight, .projectsPageLeft, .projectsPageRight {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,8 +157,12 @@ button {
   font-size: min(3em, 5.58vw);
 }
 
-.smallText {
+.mediumText {
   font-size: min(2em, 3.53vw);
+}
+
+.smallText {
+  font-size: min(1.5em, 1.53vw);
 }
 
 .subtitle {
@@ -174,7 +178,7 @@ button {
   margin-top: 60px;
 }
 
-.homeButton, .aboutButton, .contactFormButton {
+.homeButton, .aboutButton, .projectsButton, .contactFormButton {
   font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: center;
@@ -188,7 +192,7 @@ button {
   color: white;
 }
 
-.homeButton:hover, .aboutButton:hover, .contactFormButton:hover {
+.homeButton:hover, .aboutButton:hover, .projectsButton:hover, .contactFormButton:hover {
   cursor: pointer;
   border-color: gold;
   color: gold;
@@ -207,11 +211,11 @@ button {
   gap: 30px;
 }
 
-.aboutTitle {
+.aboutTitle, .projectsTitle {
   margin: 0;
 }
 
-.aboutText {
+.aboutText, .projectsText {
   display: inline-block;
   padding: 20px 10vw;
   text-align: center;
@@ -219,6 +223,66 @@ button {
 
 .aboutButton {
   width: min(160px, 10vw);
+}
+
+.projectsPageLeft {
+  width: 33%;
+}
+
+.projectsPageRight {
+  width: 66%;
+  gap: 20px;
+  /* overflow: scroll; */
+}
+
+.projectsText {
+  padding: 20px 5vw;
+}
+
+.professional, .personal {
+  width: 100%;
+}
+
+.projectList {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+  width: 100%;
+  height: 250px;
+}
+
+.projectCard {
+  width: 375px;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(40, 40, 40);
+  overflow-y: scroll;
+  scrollbar-color: gold rgba(255, 255, 255, 0);
+  scrollbar-width: thin;
+}
+
+.projectCard p {
+  font-size: 1em;
+}
+
+.innerProjectCard {
+  margin: 5px;
+}
+
+.innerProjectCard p a {
+  color: white;
+}
+
+.innerProjectCard p a:hover {
+  color: gold;
+  transition: all 200ms;
+}
+
+.projectImage {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  background-size: cover;
 }
 
 .contactPage {
