@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import PageHeader from './PageHeader.jsx';
 
 const Contact = () => {
@@ -18,11 +19,17 @@ const Contact = () => {
     }
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    // TO-DO: Send email on submit
+    const result = await axios.post('/api/sendEmail', {
+      name: name,
+      email: email,
+      message: message
+    });
 
+    setIsSubmitting(false);
     setName('');
     setEmail('');
     setMessage('');
