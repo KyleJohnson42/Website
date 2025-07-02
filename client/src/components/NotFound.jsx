@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const NotFound = () => {
-  return <h1>404</h1>;
+  return <div>404</div>;
 };
 
 export default NotFound;

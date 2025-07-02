@@ -20,6 +20,9 @@ module.exports = {
   },
   mode: 'development',
   resolve: {
+    alias: {
+      'react/jsx-runtime': 'react/jsx-runtime.js'
+    },
     extensions: ['.js', '.jsx']
   }
 };

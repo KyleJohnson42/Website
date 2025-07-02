@@ -1,5 +1,5 @@
 {
-  "name": "fullstack-reps-cowlist",
+  "name": "website",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Hack Reactor <curriculum.team@hackreactor.com>",
+  "author": "Kyle Johnson",
   "license": "ISC",
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "axios": "^0.20.0",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "mysql": "^2.18.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -26,7 +29,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "nodemon": "^2.0.4",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
   }
 }

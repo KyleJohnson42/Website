@@ -1,14 +1,18 @@
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
+  background-color: rgb(26, 26, 26);
+  color: white;
+  overflow: hidden;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
   background-color: black; /* For browsers that do not support gradients */
-  background-image: linear-gradient(rgb(70, 70, 70), black);
-  color: white;
+  background-image: linear-gradient(rgb(40, 40, 40), rgb(20, 20, 20));
+  box-shadow: 0 0 10px black;
+  z-index: 1;
 }
 
 nav > li {
@@ -21,6 +25,18 @@ nav > li:hover {
   color: gold;
   transition: color 200ms;
   cursor: pointer;
+}
+
+button {
+  font-family: "Nunito", sans-serif;
+}
+
+.app {
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
 }
 
 .active {
@@ -63,4 +79,272 @@ nav > li:hover {
   width: 55.29px;
   right: min(50px, 4vw);
   transition: all 200ms ease-in-out;
+}
+
+.sectionContainer-enter {
+  opacity: 0;
+  height: 0;
+}
+
+.sectionContainer-enter-active {
+  opacity: 1;
+  transition: opacity 1s 0.5s;
+}
+
+.sectionContainer-exit {
+  opacity: 1;
+}
+
+.sectionContainer-exit-active {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.page {
+  position: absolute;
+  top: 61.6px;
+  width: 100%;
+  height: calc(100vh - 61.6px);
+}
+
+.pageHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.pageTitle {
+  display: block;
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.pageTitleAccent {
+  width: 100%;
+  height: 1px;
+  background-color: gold;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.homePage, .aboutPage, .projectsPage {
+  display: flex;
+  height: 100%;
+}
+
+.homePageLeft, .homePageRight, .aboutPageLeft, .aboutPageRight, .projectsPageLeft, .projectsPageRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.homeTexts {
+  padding-left: 15%;
+}
+
+.homeText {
+  display: block;
+  width: 100%;
+  margin: 5px;
+  float: left;
+}
+
+.largeText {
+  font-size: min(3em, 5.58vw);
+}
+
+.mediumText {
+  font-size: min(2em, 3.53vw);
+}
+
+.smallText {
+  font-size: min(1.5em, 1.53vw);
+}
+
+.subtitle {
+  margin-top: 20px;
+}
+
+.homeButtons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 85%;
+  padding-left: 15%;
+  margin-top: 60px;
+}
+
+.homeButton, .aboutButton, .projectsButton, .contactFormButton {
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: min(120px, 10vw);
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.homeButton:hover, .aboutButton:hover, .projectsButton:hover, .contactFormButton:hover {
+  cursor: pointer;
+  border-color: gold;
+  color: gold;
+  transition: all 200ms;
+}
+
+.aboutPageLeft {
+  flex-direction: row;
+  gap: 60px;
+}
+
+.iconCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.aboutTitle, .projectsTitle {
+  margin: 0;
+}
+
+.aboutText, .projectsText {
+  display: inline-block;
+  padding: 20px 10vw;
+  text-align: center;
+}
+
+.aboutButton {
+  width: min(160px, 10vw);
+}
+
+.projectsPageLeft {
+  width: 33%;
+}
+
+.projectsPageRight {
+  width: 66%;
+  gap: 20px;
+  /* overflow: scroll; */
+}
+
+.projectsText {
+  padding: 20px 5vw;
+}
+
+.professional, .personal {
+  width: 100%;
+}
+
+.projectList {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 20px;
+  width: 100%;
+  height: 250px;
+}
+
+.projectCard {
+  width: 375px;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(40, 40, 40);
+  overflow-y: scroll;
+  scrollbar-color: gold rgba(255, 255, 255, 0);
+  scrollbar-width: thin;
+}
+
+.projectCard p {
+  font-size: 1em;
+}
+
+.innerProjectCard {
+  margin: 5px;
+}
+
+.innerProjectCard p a {
+  color: white;
+}
+
+.innerProjectCard p a:hover {
+  color: gold;
+  transition: all 200ms;
+}
+
+.projectImage {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  background-size: cover;
+}
+
+.contactPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactText {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.contactFormContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.contactFormInput {
+  font-family: "Nunito", sans-serif;
+  width: 33%;
+  height: 20px;
+  border: none;
+  background-color: rgb(40, 40, 40);
+  color: white;
+}
+
+.largeInput {
+  height: 100px;
+}
+
+.contactFormButton {
+  margin-top: 20px;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.contactLinks a img {
+  position: relative;
+  bottom: 0;
+  transition: all 200ms;
+}
+
+.contactLinks a img:hover {
+  bottom: 5px;
+  cursor: pointer;
+  transition: all 200ms;
 }
