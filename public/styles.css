@@ -129,21 +129,17 @@ button {
   z-index: -1;
 }
 
-.homePage {
+.homePage, .aboutPage {
   display: flex;
   height: 100%;
 }
 
-.homePageLeft, .homePageRight {
+.homePageLeft, .homePageRight, .aboutPageLeft, .aboutPageRight {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;
-}
-
-.homePageLeft {
-  /* padding-left: 15%; */
 }
 
 .homeTexts {
@@ -178,7 +174,7 @@ button {
   margin-top: 60px;
 }
 
-.homeButton {
+.homeButton, .aboutButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,9 +187,35 @@ button {
   color: white;
 }
 
-.homeButton:hover {
+.homeButton:hover, .aboutButton:hover {
   cursor: pointer;
   border-color: gold;
   color: gold;
   transition: all 200ms;
+}
+
+.aboutPageLeft {
+  flex-direction: row;
+  gap: 60px;
+}
+
+.iconCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.aboutTitle {
+  margin: 0;
+}
+
+.aboutText {
+  display: inline-block;
+  padding: 20px 10vw;
+  text-align: center;
+}
+
+.aboutButton {
+  width: min(160px, 10vw);
 }
