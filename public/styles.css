@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
-  background-color: rgb(50, 50, 50);
+  background-color: rgb(26, 26, 26);
   color: white;
   overflow: hidden;
 }
@@ -10,7 +10,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   background-color: black; /* For browsers that do not support gradients */
-  background-image: linear-gradient(rgb(100, 100, 100), 25%, rgb(30, 30, 30));
+  background-image: linear-gradient(rgb(40, 40, 40), rgb(20, 20, 20));
   box-shadow: 0 0 10px black;
   z-index: 1;
 }
@@ -25,6 +25,18 @@ nav > li:hover {
   color: gold;
   transition: color 200ms;
   cursor: pointer;
+}
+
+button {
+  font-family: "Nunito", sans-serif;
+}
+
+.app {
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
 }
 
 .active {
@@ -89,6 +101,8 @@ nav > li:hover {
 }
 
 .page {
+  position: absolute;
+  top: 61.6px;
   width: 100%;
   height: calc(100vh - 61.6px);
 }
@@ -113,4 +127,73 @@ nav > li:hover {
   background-color: gold;
   border-radius: 25px;
   z-index: -1;
+}
+
+.homePage {
+  display: flex;
+  height: 100%;
+}
+
+.homePageLeft, .homePageRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.homePageLeft {
+  /* padding-left: 15%; */
+}
+
+.homeTexts {
+  padding-left: 15%;
+}
+
+.homeText {
+  display: block;
+  width: 100%;
+  margin: 5px;
+  float: left;
+}
+
+.largeText {
+  font-size: min(3em, 5.58vw);
+}
+
+.smallText {
+  font-size: min(2em, 3.53vw);
+}
+
+.subtitle {
+  margin-top: 20px;
+}
+
+.homeButtons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 85%;
+  padding-left: 15%;
+  margin-top: 60px;
+}
+
+.homeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: min(120px, 10vw);
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.homeButton:hover {
+  cursor: pointer;
+  border-color: gold;
+  color: gold;
+  transition: all 200ms;
 }
