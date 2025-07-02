@@ -174,7 +174,8 @@ button {
   margin-top: 60px;
 }
 
-.homeButton, .aboutButton {
+.homeButton, .aboutButton, .contactFormButton {
+  font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +188,7 @@ button {
   color: white;
 }
 
-.homeButton:hover, .aboutButton:hover {
+.homeButton:hover, .aboutButton:hover, .contactFormButton:hover {
   cursor: pointer;
   border-color: gold;
   color: gold;
@@ -218,4 +219,68 @@ button {
 
 .aboutButton {
   width: min(160px, 10vw);
+}
+
+.contactPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactText {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.contactFormContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.contactFormInput {
+  font-family: "Nunito", sans-serif;
+  width: 33%;
+  height: 20px;
+  border: none;
+  background-color: rgb(40, 40, 40);
+  color: white;
+}
+
+.largeInput {
+  height: 100px;
+}
+
+.contactFormButton {
+  margin-top: 20px;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.contactLinks a img {
+  position: relative;
+  bottom: 0;
+  transition: all 200ms;
+}
+
+.contactLinks a img:hover {
+  bottom: 5px;
+  cursor: pointer;
+  transition: all 200ms;
 }
