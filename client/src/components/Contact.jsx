@@ -27,6 +27,8 @@ const Contact = () => {
       name: name,
       email: email,
       message: message
+    }).catch(err => {
+      console.log(err);
     });
 
     setIsSubmitting(false);
