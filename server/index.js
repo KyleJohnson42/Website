@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 app.post('/api/sendEmail', async (req, res) => {
   const { data, error } = await resend.emails.send({
-    from: "kylejohnson@mailfence.com",
+    from: "kyle@kylejohnsondev.com",
     to: ["kylejohnson@mailfence.com"],
     subject: `Message from ${req.body.name} through your personal website!`,
     html: `From ${req.body.email}: ${req.body.message}`

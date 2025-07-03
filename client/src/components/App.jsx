@@ -47,7 +47,7 @@ const App = () => {
               <About setPageSelect={setPageSelect} />
             </CSSTransition>
             <CSSTransition in={pageSelect == 'projects'} timeout={{ appear: 1000, enter: 1000, exit: 500}} classNames="sectionContainer" unmountOnExit>
-              <Projects />
+              <Projects setPageSelect={setPageSelect} />
             </CSSTransition>
             <CSSTransition in={pageSelect == 'contact'} timeout={{ appear: 1000, enter: 1000, exit: 500}} classNames="sectionContainer" unmountOnExit>
               <Contact />
