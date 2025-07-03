@@ -57,7 +57,7 @@ const Projects = () => {
             <div className='projectCard'>
               <div className='innerProjectCard'>
                 <div className='projectImage' style={{backgroundImage: 'url(./assets/chess.jpg)'}} />
-                <p>Chess<br /><br />The game of chess, implemented as a console app in C#.<br /><br />Fully converted all game logic into code. Strongly utilized Object Orient Programming to create appropriate classes for pieces, spaces, etc. The application walks players through each turn step by step, rendering the board in ASCII style as the game state changes. Prevents illegal moves, keeps track of captured pieces, and determines win conditions.<br /><br />Playable by two players taking turns on the console. Download the console app <a href="./assets/Chess.exe">here,</a> , GitHub repo <a href="https://github.com/KyleJohnson42/Chess">here.</a></p>
+                <p>Chess<br /><br />The game of chess, implemented as a console app in C#.<br /><br />Fully converted all game logic into code. Strongly utilized Object Orient Programming to create appropriate classes for pieces, spaces, etc. The application walks players through each turn step by step, rendering the board in ASCII style as the game state changes. Prevents illegal moves, keeps track of captured pieces, and determines win conditions.<br /><br />Playable by two players taking turns on the console. Download the console app <a href="./assets/Chess.exe">here,</a> GitHub repo <a href="https://github.com/KyleJohnson42/Chess">here.</a></p>
               </div>
             </div>
           </div>

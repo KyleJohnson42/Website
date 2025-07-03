@@ -21,15 +21,15 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    // setIsSubmitting(true);
 
-    const result = await axios.post('/api/sendEmail', {
-      name: name,
-      email: email,
-      message: message
-    });
+    // const result = await axios.post('/api/sendEmail', {
+    //   name: name,
+    //   email: email,
+    //   message: message
+    // });
 
-    setIsSubmitting(false);
+    // setIsSubmitting(false);
     setName('');
     setEmail('');
     setMessage('');
