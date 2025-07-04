@@ -9,12 +9,12 @@ app.http('sendEmail', {
         console.log(`Http function processing request for url "${request.url}"`);
         console.log(request);
 
-        // const { data, error } = await resend.emails.send({
-        //     from: "kyle@kylejohnsondev.com",
-        //     to: ["kylejohnson@mailfence.com"],
-        //     subject: `Message from ${request.body.name || '[No name specified]'} through your personal website!`,
-        //     html: `From ${request.body.email || '[No email specified]'}: ${request.body.message || '[No message specified]'}`
-        // });
+        const { data, error } = await resend.emails.send({
+            from: "kyle@kylejohnsondev.com",
+            to: ["kylejohnson@mailfence.com"],
+            subject: `Message from ${request.body.name || '[No name specified]'} through your personal website!`,
+            html: `From ${request.body.email || '[No email specified]'}: ${request.body.message || '[No message specified]'}`
+        });
 
         context.log(`Http function processed request for url "${request.url}"`);
 
