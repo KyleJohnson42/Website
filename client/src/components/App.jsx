@@ -24,6 +24,14 @@ const App = () => {
       });
   }, []);
 
+  useEffect(() => {
+    (async function () {
+      console.log('Testing Azure function...');
+      const { text } = await( await fetch(`/api/message`)).json();
+      console.log(text);
+    })();
+  });
+
   const particlesLoaded = (container) => {
       console.log(container);
   };
