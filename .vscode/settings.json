@@ -10,7 +10,7 @@
   "javascript.suggest.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "javascript.validate.enable": false,
-  "azureFunctions.deploySubpath": "server",
+  "azureFunctions.deploySubpath": "api",
   "azureFunctions.postDeployTask": "npm install (functions)",
   "azureFunctions.projectLanguage": "JavaScript",
   "azureFunctions.projectRuntime": "~4",
