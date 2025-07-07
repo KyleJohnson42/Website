@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import PageHeader from './PageHeader.jsx';
 
-const Projects = ({setPageSelect}) => {
+const Projects = ({setPageSelect, isMobile}) => {
   const handleClick = () => {
     setPageSelect('contact');
   };
 
   return <div className='page'>
-    <div className='projectsPage'>
-      <div className='projectsPageLeft'>
+    <div className='projectsPage' style={{flexDirection: `${isMobile  ? 'column' : 'row'}`, height: `${isMobile ? 'fit-content' : ''}`}} >
+      <div className='projectsPageLeft' style={{width: `${isMobile  ? '100%' : '50%'}`, margin: `${isMobile ? '50px' : '0'}`}} >
         <p className='projectsTitle largeText'>My projects</p>
         <p className='projectsText'>I've made more than just this one website! Here is a sampling of my work, both professional and personal. More updates to come for this page, so keep an eye out!<br /><br />If you'd like to know more about any of these projects or about other work not listed here, then please check out my...</p>
         <a href='./assets/kyle_johnson_resume.pdf' target='_blank' className='projectsButton' >Resume</a>
@@ -17,8 +17,8 @@ const Projects = ({setPageSelect}) => {
       </div>
       <div className='projectsPageRight'>
         <div className='professional'>
-          <p className='projectsTitle smallText'>Professional Work</p>
-          <div className='projectList'>
+          <p className={`projectsTitle${isMobile ? '' : ' smallText'}`} >Professional Work</p>
+          <div className='projectList' style={{flexDirection: `${isMobile ? 'column' : 'row'}`, height: `${isMobile ? 'fit-content' : '250px'}`}} >
             <div className='projectCard'>
               <div className='innerProjectCard'>
                 <div className='projectImage' style={{backgroundImage: 'url(./assets/mylabsdirect.png)'}} />
@@ -40,8 +40,8 @@ const Projects = ({setPageSelect}) => {
           </div>
         </div>
         <div className='personal'>
-          <p className='projectsTitle smallText'>Personal Projects</p>
-          <div className='projectList'>
+          <p className={`projectsTitle${isMobile ? '' : ' smallText'}`} >Personal Projects</p>
+          <div className='projectList' style={{flexDirection: `${isMobile ? 'column' : 'row'}`, height: `${isMobile ? 'fit-content' : '250px'}`}} >
             <div className='projectCard'>
               <div className='innerProjectCard'>
                 <div className='projectImage' style={{backgroundImage: 'url(./assets/jobtracker.jpg)'}} />
